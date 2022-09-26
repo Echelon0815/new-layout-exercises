@@ -1,0 +1,18 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/*宣告常用的顏色，作為變數*/
+html {
+    --white:#FFFFFF;
+    --black:#000000;
+    --orange:#EE3D18;
+    --red:#D52047;
+    scroll-behavior: smooth;
+}
+/*宣告常用的容器、屬性*/
+.container {
+    width: 1440px;
+    padding: 0 165px;
+}

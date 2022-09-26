@@ -1,0 +1,8 @@
+<i class="fa-solid fa-cloud"></i> 
+<i class="fa-solid fa-cloud-arrow-down"></i>
+<i class="fa-solid fa-user-shield"></i>
+<i class="fa-solid fa-file-pdf"></i>
+<i class="fa-solid fa-file-csv"></i>
+<i class="fa-brands fa-facebook-f"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-brands fa-twitter"></i>
