@@ -22,7 +22,12 @@
     <!--蒐集font-icon要20分...-->
     <!--圖裡看起來是明顯的col-6 vs col-6-->
     <!--用 var (變數名) 使用變數！-->
-    <nav id="nav">
+    <!--nav不能用fix，因為我不會用js改字體顏色-->
+    <!--合併nav到mainvision裡頭-->
+     <!--如何設計按鈕，感到困惑-->
+     <!--在替navbar設計高度時，又會影響到container內的text-flex，看來還是得先把navbar裡的元素高度弄好-->
+    <section id="mainvision">
+        <div class="container">
             <div class="navbar-flex">
                 <div class="cloud-logo">
                     <p><i class="fa-solid fa-cloud"></i>CLOUDBUDGET</p>
@@ -34,7 +39,6 @@
                         <li><a href="#technology">TECHNOLOGY</a></li>
                         <li><a href="#contact">CONTACT</a></li>
                         <li><a href="">SIGN UP</a></li>
-
                     </ul>
                 </div>
                 <div class="lang">
@@ -51,38 +55,38 @@
                     <a class="login-btn" href="">Login</a>
                 </div>
             </div>
-    </nav>
-    <section id="mainvision">
-        <div class="container">
-                <div class="text-flex">
+            <div class="text-flex">
                     <div>
                         <h1>CLOUDBUDGET</h1>
                     </div>
+                    <div class="cushion"></div>
                     <div>
                         <p>Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of 
                             Up to €4.99</p>
                     </div>
+                    <div class="cushion"></div>
                     <div class="button-box-flex">
                         <div class="button-box">
                             <a href="" class="signup">SIGN UP</a>
                         </div>
                     </div>
-                </div>
+                    <div class="cushion2"></div>
+            </div>
         </div>
     </section>
     <section id="introduction">
         <div class="container">
             <div class="content-wrapper-flex">
-                <div class="content-left">
-                    <article class="text-flex">
-                        <h2></h2>
-                        <p></p>
+                <div class="content-left-flex">
+                    <article class="text">
+                        <h2>Easy to Use Cloud Budget Management Software</h2>
+                        <p>Our software is made so you can access and manage your budget and expenses online at any time from any device. It provides detailed income and expense reports with graphs so you can easilly see your spending patterns and budget at a glance. Read below to find out more.</p>
                         <a href="">Learn More</a>
                     </article>
                 </div>
                 <div class="content-right">
                     <div class="figure">
-                        <img src="" alt="">
+                        <img src="./asset/intro_bg.png" alt="a introduction video of our services">
                     </div>
                 </div>
             </div>

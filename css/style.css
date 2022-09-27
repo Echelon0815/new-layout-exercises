@@ -21,8 +21,24 @@ html {
     --black:#000000;
     --orange:#EE3D18;
     --red:#D52047;
+    --text-size-p:14px;
     scroll-behavior: smooth;
     font-family: 'lato';
+    font-size:24px;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
 }
 /*宣告常用的容器、屬性*/
 /*若不限制最大寬，要如何安排元素位置?*/
@@ -33,7 +49,7 @@ html {
 
 a, a:active ,a:hover,a:link,a:visited  {
     text-decoration: none;
-    color:var(--white)
+    color:var(--white);
 }
 
 ul,ol,li {
@@ -45,91 +61,136 @@ ul,ol,li {
     display: flex;
 }
 
-/*----------nav----------*/
-#nav {
-    position: fixed;
-    top:0;
-    width: 100%;
-    height: 12vh;
-    padding:0 165px;
-
-    border: 2px solid red;
-}
-
-nav div{
-    border:2px solid #000000;
-}
-
-#nav .cloud-logo {
-    flex:0 0 15%
-}
-
-#nav .links {
-    flex:0 0 30%;
-}
-#nav li {
-    display: inline-block;
-    height: 100%;
-}
-#nav .lang {
-    flex:0 0 10%; 
-}
-#nav .login {
-    flex:0 0 10%
-}
-
-
 /*----------mainvision----------*/
 #mainvision .container {
     background:url(../asset/main_bg1.png) no-repeat center/cover;
-    border: 2px dotted blue;
-    height: 95vh;
+    height: calc(100vw*.543);
+/*讓container 可以被圖片撐開*/
 }
+
+#mainvision .navbar-flex {
+    width: 100%;
+}
+
+#mainvision .navbar-flex div{
+    border-left:2px solid #000000;
+    border-right:2px solid #000000;
+    align-self: center;
+}
+
+#mainvision .cloud-logo {
+    flex:0 0 20%;
+    font-size: 1.2rem;
+/*align-self對flex-box的後裔有效??...無效，這是對div產生影響*/
+}
+
+#mainvision .links {
+    flex:1 0 30%;
+}
+
+#mainvision ul {
+    text-align:center;
+/*ul對子元素的li 可以使用text-align*/
+}
+
+#mainvision li {
+    margin-right: 7% ;
+    display: inline-block;
+    height: 100%;
+    font-weight: 700;
+    font-size: var(--text-size-p);
+    color: var(--white);
+}
+#mainvision .lang {
+    flex:0 0 10%; 
+}
+#mainvision .login {
+    flex:0 0 10%;
+    text-align: center;
+}
+
 #mainvision .text-flex {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 76.8px);
     flex-flow:column nowrap;
+    justify-content: end;
+    /*四則運算要有空白*/
+    /*為甚麼navbar會是84.8px高？*/
     /* align-content: center; */
     /*這條沒有意義，因為flex-item都是width100%了
      *置中是因為div的 text align*/
-    justify-content: end;
 }
 
 #mainvision .text-flex div {
     text-align: center;
+    color: var(--white);
+}
+/*用穿插隱藏flex item的方式 把內容往上提*/
+#mainvision .cushion {
+    flex: 0 0 8%;
+}
+#mainvision .cushion2 {
+    flex: 0 0 27%;
 }
 
-#mainvision .text-flex div:first-child(1) {
-    flex:0 0 20%;
-}
-#mainvision .text-flex div:nth-child(2) {
-    flex:0 0 20%;
-}
-#mainvision .text-flex div:nth-child(3){
-    flex:0 0 20%;
-    justify-content: center;
-}
-
-#mainvision h1 {
-    font-weight: 700;
-    font-size: 72px;
-    line-height: 86px;
-}
-#mainvision p{
-    font-weight: 500;
-    font-size: 24px;
+#mainvision .text-flex p{
+    font-weight: 600;
     line-height: 36px;
+    font-size: 1rem;
+/*記得來調p的寬高*/
 }
-#mainvision .button-box {
+#mainvision .text-flex .button-box-flex {
+    justify-content: center;
+    /*div>a的情況下 沒辦法將a給置中;將div拉長，會讓a的字往上跑*/
+}
+#mainvision .text-flex .button-box-flex .button-box {
     width: 160px;
     height: 50px;
     background-color: var(--white);
     border-radius: 6px;
-    padding:14px 0;
+    padding:7px 0;
+    /*用padding置中a的文字*/
 }
-#mainvision a {
+#mainvision .text-flex .button-box-flex .button-box a {
     height: 100%;
     width: 100%;
+    font-size: var(--text-size-p);
     display: inline-block;
     color: var(--red);
+}
+
+/*-----------introduction----------*/
+#introduction .content-left, #introduction .content-right {
+    flex:0 0 50%;
+}
+#introduction .text-flex {
+    flex-flow: column nowrap;
+}
+
+#introduction .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+#introduction .content-left-flex, #introduction .content-right {
+    flex:0 0 50%;
+    position: relative;
+}
+#introduction .content-left-flex {
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+#introduction .text h2 {
+    font-weight: 600;
+    font-size: 36px;
+
+}
+#introduction .text a{
+    color:var(--red);
+    font-size: var(--text-size-p);
+}
+#introduction .figure {
+    /* position: absolute;
+    left: 0%;
+    top: 50%; */
 }
