@@ -3,6 +3,18 @@
     box-sizing: border-box;
 }
 
+
+/*常用的font-awesome 字體
+ *<i class="fa-solid fa-cloud"></i> 
+ *<i class="fa-solid fa-cloud-arrow-down"></i>
+ *<i class="fa-solid fa-user-shield"></i>
+ *<i class="fa-solid fa-file-pdf"></i>
+ *<i class="fa-solid fa-file-csv"></i>
+ *<i class="fa-brands fa-facebook-f"></i>
+ *<i class="fa-brands fa-linkedin"></i>
+ *<i class="fa-brands fa-twitter"></i>
+*/
+
 /*宣告常用的顏色，作為變數*/
 html {
     --white:#FFFFFF;
@@ -10,9 +22,114 @@ html {
     --orange:#EE3D18;
     --red:#D52047;
     scroll-behavior: smooth;
+    font-family: 'lato';
 }
 /*宣告常用的容器、屬性*/
+/*若不限制最大寬，要如何安排元素位置?*/
 .container {
-    width: 1440px;
-    padding: 0 165px;
+    width: 100%;
+    padding: 0 11.5%;
+}
+
+a, a:active ,a:hover,a:link,a:visited  {
+    text-decoration: none;
+    color:var(--white)
+}
+
+ul,ol,li {
+    list-style: none;
+}
+
+/*宣告有flex屬性值的元素之css*/
+*[class$=-flex] {
+    display: flex;
+}
+
+/*----------nav----------*/
+#nav {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 12vh;
+    padding:0 165px;
+
+    border: 2px solid red;
+}
+
+nav div{
+    border:2px solid #000000;
+}
+
+#nav .cloud-logo {
+    flex:0 0 15%
+}
+
+#nav .links {
+    flex:0 0 30%;
+}
+#nav li {
+    display: inline-block;
+    height: 100%;
+}
+#nav .lang {
+    flex:0 0 10%; 
+}
+#nav .login {
+    flex:0 0 10%
+}
+
+
+/*----------mainvision----------*/
+#mainvision .container {
+    background:url(../asset/main_bg1.png) no-repeat center/cover;
+    border: 2px dotted blue;
+    height: 95vh;
+}
+#mainvision .text-flex {
+    width: 100%;
+    height: 100%;
+    flex-flow:column nowrap;
+    /* align-content: center; */
+    /*這條沒有意義，因為flex-item都是width100%了
+     *置中是因為div的 text align*/
+    justify-content: end;
+}
+
+#mainvision .text-flex div {
+    text-align: center;
+}
+
+#mainvision .text-flex div:first-child(1) {
+    flex:0 0 20%;
+}
+#mainvision .text-flex div:nth-child(2) {
+    flex:0 0 20%;
+}
+#mainvision .text-flex div:nth-child(3){
+    flex:0 0 20%;
+    justify-content: center;
+}
+
+#mainvision h1 {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+}
+#mainvision p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+#mainvision .button-box {
+    width: 160px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 6px;
+    padding:14px 0;
+}
+#mainvision a {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    color: var(--red);
 }
