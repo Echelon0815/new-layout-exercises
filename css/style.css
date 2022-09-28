@@ -1,9 +1,3 @@
-
-* {
-    box-sizing: border-box;
-}
-
-
 /*常用的font-awesome 字體
  *<i class="fa-solid fa-cloud"></i> 
  *<i class="fa-solid fa-cloud-arrow-down"></i>
@@ -16,6 +10,12 @@
 */
 
 /*宣告常用的顏色，作為變數*/
+
+
+* {
+    box-sizing: border-box;
+}
+
 html {
     --white:#FFFFFF;
     --black:#000000;
@@ -62,54 +62,88 @@ ul,ol,li {
 }
 
 /*----------mainvision----------*/
+#mainvision .bg-filter {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
 #mainvision .container {
     background:url(../asset/main_bg1.png) no-repeat center/cover;
     height: calc(100vw*.543);
-/*讓container 可以被圖片撐開*/
+    position: relative;
+    /*讓container 可以被圖片撐開*/
 }
+    
+    #mainvision .navbar-flex {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
 
-#mainvision .navbar-flex {
-    width: 100%;
-}
+        #mainvision .navbar-flex div{
+            align-self: center;
+            text-align: center;
+            color: var(--white);
+        }
 
-#mainvision .navbar-flex div{
-    border-left:2px solid #000000;
-    border-right:2px solid #000000;
-    align-self: center;
-}
+                #mainvision .cloud-logo {
+                    flex:0 0 20%;
+                /*align-self對flex-box的後裔有效??...無效，這是對div產生影響*/
+                }
+                #mainvision .cloud-logo p{
+                    font-size: .9rem;
+                    line-height: 1.2;
+                }
+                #mainvision .cloud-logo span{
+                 margin-left: 5px;
+                }
 
-#mainvision .cloud-logo {
-    flex:0 0 20%;
-    font-size: 1.2rem;
-/*align-self對flex-box的後裔有效??...無效，這是對div產生影響*/
-}
+                #mainvision .links {
+                    flex:1 0 30%;
+                }
 
-#mainvision .links {
-    flex:1 0 30%;
-}
+                #mainvision ul {
+                    text-align:center;
+                /*ul對子元素的li 可以使用text-align*/
+                }
 
-#mainvision ul {
-    text-align:center;
-/*ul對子元素的li 可以使用text-align*/
-}
+                #mainvision li {
+                    margin-right: 7% ;
+                    display: inline-block;
+                    height: 100%;
+                    font-weight: 700;
+                    font-size: var(--text-size-p);
+                    color: var(--white);
+                }
+                #mainvision .lang {
+                    flex:0 0 10%; 
+                    font-size: var(--text-size-p);
+                    font-weight: 400;
+                }
 
-#mainvision li {
-    margin-right: 7% ;
-    display: inline-block;
-    height: 100%;
-    font-weight: 700;
-    font-size: var(--text-size-p);
-    color: var(--white);
-}
-#mainvision .lang {
-    flex:0 0 10%; 
-}
-#mainvision .login {
-    flex:0 0 10%;
-    text-align: center;
-}
+                #mainvision .login {
+                    flex:0 0 10%;
+                    font-size: var(--text-size-p);
+                    font-weight: 400;
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 6px;
+                    border: 1px solid var(--white);
+                }
+                    #mainvision .login a {
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                        line-height: 2.6;
+                        /*決定用line-height置中文字*/
+                    }
 
 #mainvision .text-flex {
+    position: relative;
     width: 100%;
     height: calc(100% - 76.8px);
     flex-flow:column nowrap;
@@ -133,31 +167,33 @@ ul,ol,li {
     flex: 0 0 27%;
 }
 
-#mainvision .text-flex p{
-    font-weight: 600;
-    line-height: 36px;
-    font-size: 1rem;
-/*記得來調p的寬高*/
-}
-#mainvision .text-flex .button-box-flex {
-    justify-content: center;
-    /*div>a的情況下 沒辦法將a給置中;將div拉長，會讓a的字往上跑*/
-}
-#mainvision .text-flex .button-box-flex .button-box {
-    width: 160px;
-    height: 50px;
-    background-color: var(--white);
-    border-radius: 6px;
-    padding:7px 0;
-    /*用padding置中a的文字*/
-}
-#mainvision .text-flex .button-box-flex .button-box a {
-    height: 100%;
-    width: 100%;
-    font-size: var(--text-size-p);
-    display: inline-block;
-    color: var(--red);
-}
+    #mainvision .text-flex .button-box-flex {
+        justify-content: center;
+        /*div>a的情況下 沒辦法將a給置中;將div拉長，會讓a的字往上跑*/
+    }
+    #mainvision .text-flex p{
+        font-weight: 600;
+        line-height: 36px;
+        font-size: 1rem;
+    /*記得來調p的寬高*/
+    }
+    #mainvision .text-flex .button-box-flex .button-box {
+        width: 160px;
+        height: 50px;
+        background-color: var(--white);
+        border-radius: 6px;
+        /* padding:7px 0; */
+        /*用padding置中a的文字*/
+    }
+        #mainvision .text-flex .button-box-flex .button-box a {
+            height: 100%;
+            width: 100%;
+            font-size: var(--text-size-p);
+            display: inline-block;
+            color: var(--red);
+            line-height: 3.5;
+                /*決定用line-height置中文字*/
+        }
 
 /*-----------introduction----------*/
 #introduction .content-left, #introduction .content-right {
@@ -179,18 +215,21 @@ ul,ol,li {
 #introduction .content-left-flex {
     flex-flow: column nowrap;
     justify-content: center;
+
+    
 }
 #introduction .text h2 {
     font-weight: 600;
     font-size: 36px;
-
+}
+#introduction .text p {
+    text-align: justify;
+    width: 87%;
 }
 #introduction .text a{
     color:var(--red);
     font-size: var(--text-size-p);
 }
-#introduction .figure {
-    /* position: absolute;
-    left: 0%;
-    top: 50%; */
+#introduction .content-right {
+    text-align: center;
 }
