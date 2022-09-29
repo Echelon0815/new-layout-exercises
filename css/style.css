@@ -47,6 +47,11 @@ h2 {
     padding: 0 11.5%;
 }
 
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
 a, a:active ,a:hover,a:link,a:visited  {
     text-decoration: none;
     color:var(--white);
@@ -219,12 +224,11 @@ ul,ol,li {
     
 }
 #introduction .text h2 {
-    font-weight: 600;
-    font-size: 36px;
+    width: 80%;
 }
 #introduction .text p {
     text-align: justify;
-    width: 87%;
+    width: 76%;
 }
 #introduction .text a{
     color:var(--red);
@@ -232,4 +236,63 @@ ul,ol,li {
 }
 #introduction .content-right {
     text-align: center;
+}
+
+/*----------feature----------*/
+#feature  h1 {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 9.1rem;
+}
+#feature .text-wrapper-flex {
+    justify-content: space-evenly;
+}
+#feature .text-box {
+    position: relative;
+    text-align: center;
+    width: 20%;
+    padding: 33px 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 30px rgba(0,0,0,.1);
+    height: fit-content;
+    z-index: 1;
+}
+#feature h2{
+    font-weight: 700;
+    font-size: 18px;
+}
+#feature p {
+    font-weight: 400;
+    font-size: 12px;
+}
+#feature a {
+    font-weight: 700;
+    font-size: 12px;
+    color:var(--red);
+}
+#feature .tb01::before {
+    content:url(../asset/feature_1.png);
+    position: absolute;
+    border-radius: 8px;
+    z-index: -1;
+    top: -70%;
+    left: -13%;
+}
+#feature .tb02::before {
+    position: absolute;
+    content: url(../asset/feature_2.png);
+    border-radius: 8px;
+    z-index: -1;
+    top: -70%;
+    left: -13%;
+
+}
+#feature .tb03::before {
+    position: absolute;
+    content: url(../asset/feature_3.png);
+    border-radius: 8px;
+    z-index: -1;
+    top: -70%;
+    left: -13%;
 }
