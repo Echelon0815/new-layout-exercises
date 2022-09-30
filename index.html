@@ -24,7 +24,7 @@
     <!--用 var (變數名) 使用變數！-->
     <!--nav不能用fix，因為我不會用js改字體顏色-->
     <!--合併nav到mainvision裡頭-->
-     <!--如何設計按鈕，感到困惑-->
+     <!--如何設計按鈕，感到困惑，用a本身？用div,li？-->
      <!--在替navbar設計高度時，又會影響到container內的text-flex，看來還是得先把navbar裡的元素高度弄好-->
     <section id="mainvision">
         <div class="container">
@@ -81,7 +81,7 @@
             <div class="content-wrapper-flex">
                 <div class="content-left-flex">
                     <article class="text">
-                        <h2>Easy to Use Cloud Budget Management Software</h2>
+                        <h2 class="section-title">Easy to Use Cloud Budget Management Software</h2>
                         <p>Our software is made so you can access and manage your budget and expenses online at any time from any device. It provides detailed income and expense reports with graphs so you can easilly see your spending patterns and budget at a glance. Read below to find out more.</p>
                         <a href="">Learn More</a>
                     </article>
@@ -96,23 +96,26 @@
     </section>
     <section id="feature">
         <div class="container">
-            <h2></h2>
+            <h1 class="section-title">Features</h1>
             <div class="text-wrapper-flex">
-    <!--用偽元素處理背景圖-->
-                <div class="text-box">
-                    <h2></h2>
-                    <p></p>
-                    <a href=""></a>
+    <!--用偽元素處理背景圖,因為裡頭感覺沒有太多其他元素-->
+    <!--用absolute 會撐開text-box 不能用::after ；可以用absolute 加上 height:fit-content-->
+    <!--z-index 仍會讓背景圖蓋住text-box白色的部分-->
+    <!--如果不在text-box 上設置 z-index 就可以...wtf-->
+                <div class="text-box tb01">
+                    <h2>Supports All Currencies and Cards</h2>
+                    <p>We support all popular currencies and is fully customizable to add</p>
+                    <a href="">Read More</a>
                 </div>
-                <div class="text-box">
-                    <h2></h2>
-                    <p></p>
-                    <a href=""></a>
+                <div class="text-box tb02">
+                    <h2>Manage your expenses on the go</h2>
+                    <p>You can access your account from anywhere in the world on any device</p>
+                    <a href="">Read More</a>
                 </div>
-                <div class="text-box">
-                    <h2></h2>
-                    <p></p>
-                    <a href=""></a>
+                <div class="text-box tb03">
+                    <h2>Cloud Budget Management Software</h2>
+                    <p>Our software is made so you can access and manage your budget</p>
+                    <a href="">Read More</a>
                 </div>
             </div>
         </div>
@@ -120,32 +123,27 @@
     <section id="technology">
         <div class="container">
     <!--用font icon試試看 ，其他一樣-->
-            <h2>Technology</h2>
+            <h1 class="section-title">Technology</h1>
             <div class="text-wrapper-flex">
-                <div class="text-box">
-                    <h3></h3>
-                    <p></p>
-                    <a href=""></a>
+                <div class="text-box tb1">
+                    <figure><i class="fa-solid fa-cloud-arrow-down"></i></figure>
+                    <h2>Cloud Storage</h2>
+                    <p>Access your account from anywhere in the world on any device</p>
                 </div>
-                <div class="text-box">
-                    <h3></h3>
-                    <p></p>
-                    <a href=""></a>
+                <div class="text-box tb2">
+                    <figure><i class="fa-solid fa-user-shield"></i></figure>
+                    <h2>Secure</h2>
+                    <p>All your information is stored on secure cloud servers</p>
                 </div>
-                <div class="text-box">
-                    <h3></h3>
-                    <p></p>
-                    <a href=""></a>
+                <div class="text-box tb3">
+                    <figure><i class="fa-solid fa-file-pdf"></i></figure>
+                    <h2>PDF Download</h2>
+                    <p>Download any of your reports in PDF format</p>
                 </div>
-                <div class="text-box">
-                    <h3></h3>
-                    <p></p>
-                    <a href=""></a>
-                </div>
-                <div class="text-box">
-                    <h3></h3>
-                    <p></p>
-                    <a href=""></a>
+                <div class="text-box tb4">
+                    <figure><i class="fa-solid fa-file-csv"></i></figure>
+                    <h2>CSV Download</h2>
+                    <p>All your information is stored on secure cloud servers</p>
                 </div>
             </div>
         </div>
@@ -154,14 +152,18 @@
         <div class="container">
             <div class="content-wrapper-flex">
                 <div class="content-left">
-                    <h2></h2>
-                    <p></p>
-                    <div class="icon-flex"></div>
+                    <h2 class="section-title">Stay focused on saving money</h2>
+                    <p>It is important to stay focused on saving money in any way you can. We help you monitor your spending habits so you can easily spot and cut any unnecessary expenses. Simply join today to get started!</p>
+                    <div class="icon-flex">
+                        <img src="./asset/logo-google-playstore.png" alt="">
+                        <img src="./asset/apple-store-maybe.png" alt="">
+                        <img src="./asset/windows-logo.png" alt="">
+                    </div>
                 </div>
-                <div class="content-right">
-                    <img src="" alt="" class="bg01">
-                    <img src="" alt="" class="bg02">
-                    <img src="" alt="" class="bg03">
+                <div class="content-right-flex">
+                    <img src="./asset/Video_bg_1.png" alt="" class="bg01">
+                    <img src="./asset/Video_bg_2.png" alt="" class="bg02">
+                    <img src="./asset/Video_bg_3.png" alt="" class="bg03">
                 </div>
             </div>
         </div>
@@ -170,16 +172,20 @@
         <div class="container">
             <div class="content-wrapper-flex">
                 <div class="content-left">
-                    <h2></h2>
-                    <p></p>
+                    <h2 class="section-title">Contact</h2>
+                    <p>Questions or concerns? Just fill out the form below and our support team will get back to you within 24 hours</p>
                 </div>
                 <div class="content-right">
-                    <form action="" method="post">
-                        <input type="text" class="1st-name">
-                        <input type="text" class="last-name">
-                        <input type="text" class="number">
-                        <select name="" id="" class="service"></select>
-                        <button class="post"></button>
+                    <form action="" method="">
+                        <input type="text" class="1st-name" placeholder="First Name">
+                        <input type="text" class="last-name" placeholder="Last Name">
+                        <input type="text" class="number" placeholder="Phone number">
+                        <select name="" id="" class="service">
+                            <option value="">Select Service</option>
+                            <option value="">Free Trial for 3 Months</option>
+                            <option value="">Customized Solution</option>
+                        </select>
+                        <button class="post">SUBMIT NOW</button>
                     </form>
                 </div>
             </div>
@@ -190,29 +196,36 @@
         <div class="container">
             <div class="content-wrapper-flex">
                 <div class="f-address">
-                    <h3></h3>
-                    <p></p>
+                    <h3>Address</h3>
+                    <p>Pipang Ltd, Griva Digeni,
+                        81-83 Jacovides Tower, 1st Floor
+                        1090 Picosia USA</p>
                 </div>
                 <div class="f-service">
-                    <h3></h3>
+                    <h3>Services</h3>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">overview</a></li>
+                        <li><a href="">features</a></li>
+                        <li><a href="">technology</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privecy</a></li>
                     </ul>
                 </div>
                 <div class="contact">
-                    <h3></h3>
+                    <h3>Get in Touch</h3>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">info@cloudbudget.com</a></li>
+                        <li><a href="">+1 844-721-7120</a></li>
                     </ul>
-                    <div class="icon-box"></div>
+                    <div class="icon-box">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
                 </div>
                 <div class="credit-card">
-                    <h3></h3>
-                    <img src="" alt="">
+                    <h3>We Support</h3>
+                    <img src="./asset/credit_card.png" alt="">
                 </div>
             </div>
         </div>

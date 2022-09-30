@@ -1,9 +1,13 @@
 /*常用的font-awesome 字體
  *<i class="fa-solid fa-cloud"></i> 
  *<i class="fa-solid fa-cloud-arrow-down"></i>
+ *<i class="fa-light fa-cloud-arrow-down"></i>
  *<i class="fa-solid fa-user-shield"></i>
+ *<i class="fa-regular fa-user-shield"></i>
  *<i class="fa-solid fa-file-pdf"></i>
+ *<i class="fa-light fa-file-pdf"></i>
  *<i class="fa-solid fa-file-csv"></i>
+ *<i class="fa-light fa-file-csv"></i>
  *<i class="fa-brands fa-facebook-f"></i>
  *<i class="fa-brands fa-linkedin"></i>
  *<i class="fa-brands fa-twitter"></i>
@@ -45,6 +49,11 @@ h2 {
 .container {
     width: 100%;
     padding: 0 11.5%;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 a, a:active ,a:hover,a:link,a:visited  {
@@ -219,12 +228,11 @@ ul,ol,li {
     
 }
 #introduction .text h2 {
-    font-weight: 600;
-    font-size: 36px;
+    width: 80%;
 }
 #introduction .text p {
     text-align: justify;
-    width: 87%;
+    width: 76%;
 }
 #introduction .text a{
     color:var(--red);
@@ -232,4 +240,155 @@ ul,ol,li {
 }
 #introduction .content-right {
     text-align: center;
+}
+
+/*----------feature----------*/
+#feature  h1 {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 9.1rem;
+}
+#feature .text-wrapper-flex {
+    justify-content: space-evenly;
+    margin-bottom: 6.5rem;
+}
+#feature .text-box {
+    background-color: var(--white);
+    position: relative;
+    text-align: center;
+    width: 20%;
+    padding: 33px 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 30px rgba(0,0,0,.1);
+}
+#feature h2{
+    font-weight: 700;
+    font-size: 18px;
+}
+#feature p {
+    font-weight: 400;
+    font-size: 12px;
+}
+#feature a {
+    font-weight: 700;
+    font-size: 12px;
+    color:var(--red);
+}
+#feature .tb01::before {
+    content:url(../asset/feature_1.png);
+    position: absolute;
+    border-radius: 8px; 
+    top: -70%;
+    left: -10.25%;
+    z-index: -1;
+}
+#feature .tb02::before {
+    position: absolute;
+    content: url(../asset/feature_2.png);
+    border-radius: 8px;
+    top: -70%;
+    left: -10.25%;
+    z-index: -1;
+}
+#feature .tb03::before {
+    position: absolute;
+    content: url(../asset/feature_3.png);
+    border-radius: 8px;
+    z-index: -1;
+    top: -70%;
+    left: -10.25%;
+}
+/*---------technology---------*/
+#technology h1{
+    width:100%;
+    text-align: center;
+    margin-bottom: 3.1rem;
+}
+
+#technology .text-wrapper-flex {
+    justify-content: space-around;
+    margin-bottom: 3.8rem;
+}
+#technology .text-box {
+    background-color: transparent;
+    position: relative;
+    text-align: center;
+    width: 15%;
+    padding: 33px 20px 25px;
+}
+#technology i {
+    font-size: 3rem;
+    color: var(--red);
+}
+#technology h2 {
+    font-weight: 700;
+    font-size: 18px;
+}
+#technology p {
+    font-weight: 400;
+    font-size: 12px;    
+}
+#technology .tb1::before{
+    content: "01";
+    font-weight: 700;
+    font-size: 5rem;
+    color: #10101014;
+    position: absolute;
+    top: -10%;
+     left: 17.5%;
+  }
+#technology .tb2::before{
+    content: "02";
+    font-weight: 700;
+    font-size: 5rem;
+    color: #10101014;
+    position: absolute;
+    top: -10%;
+     left: 17.5%;
+}
+#technology .tb3::before{
+    content: "03";
+    font-weight: 700;
+    font-size: 5rem;
+    color: #10101014;
+    position: absolute;
+    top: -10%;
+     left: 17.5%;
+}
+#technology .tb4::before{
+    content: "04";
+    font-weight: 700;
+    font-size: 5rem;
+    color: #10101014;
+    position: absolute;
+    top: -10%;
+     left: 17.5%;
+}
+/*----------animation----------*/
+#animation .container {
+    background-color:#ED4C5C;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+#animation .content-left,#animation .content-right-flex {
+    flex:0 0 50%;
+    justify-content: center;   
+}
+/*----------contact----------*/
+#contact .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#contact .content-left,#contact .content-right {
+    flex:0 0 50%
+}
+/*---------footer----------*/
+#footer {
+    background-color: #FAFAFA;
+}
+#footer li, #footer a {
+    color:var(--black);
+
 }
